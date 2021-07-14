@@ -1,8 +1,12 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AGAA,OAAO,CAAC,mFAAI",
     "sources": [
-        "styles.scss"
+        "styles.scss",
+        "_variables.scss",
+        "_mixins.scss",
+        "_fonts.scss",
+        "_global.scss"
     ],
     "names": [],
     "file": "styles.css"

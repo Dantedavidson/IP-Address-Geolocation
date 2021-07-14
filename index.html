@@ -14,10 +14,53 @@
     <title>Frontend Mentor | IP Address Tracker</title>
 
     <link rel="stylesheet" href="sass/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
   </head>
   <body>
-    IP Address Tracker Search for any IP address or domain IP Address Location
-    Timezone UTC ISP
+    <header>
+      <h1>IP Address Tracker</h1>
+      <div class="form">
+        <input
+          placeholder="Search for any IP address or domain"
+          type="text"
+          class="form__input"
+        />
+        <div class="form__button button">
+          <span class="button__arrow"></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container data">
+      <div class="data__content">
+        <h3 class="data__title">IP Address</h3>
+        <p class="data__value"></p>
+      </div>
+      <div class="data__content">
+        <h3 class="data__title">Location</h3>
+        <p class="data__value"></p>
+      </div>
+      <div class="data__content">
+        <h3 class="data__title">Timezone</h3>
+        <p class="data__value"></p>
+      </div>
+      <div class="data__content">
+        <h3 class="data__title">ISP</h3>
+        <p class="data__value"></p>
+      </div>
+    </main>
+
+    <div class="map" id="mapid"></div>
 
     <script src="script.js"></script>
   </body>
