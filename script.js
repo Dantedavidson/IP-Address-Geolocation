@@ -1,4 +1,4 @@
-import TOKEN from "config.js";
+import TOKEN from "./config.js";
 
 const blackIcon = new L.Icon({
   iconUrl: "./images/icon-location.svg",
