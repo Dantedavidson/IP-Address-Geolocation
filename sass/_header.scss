@@ -1,0 +1,50 @@
+header {
+  height: 18.5rem;
+  background-image: url("../images/pattern-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 1.875rem;
+
+  @include breakpoint-up(large) {
+    height: 17.5rem;
+  }
+}
+
+.form {
+  width: 20.375rem;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: auto;
+
+  @include breakpoint-up(medium) {
+    width: 27.53125rem;
+  }
+
+  @include breakpoint-up(large) {
+    width: 34.6875rem;
+  }
+
+  &__input {
+    flex-grow: 1;
+  }
+
+  &__button {
+    position: relative;
+    background-color: $black;
+    width: 3.625rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($black, 10%);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

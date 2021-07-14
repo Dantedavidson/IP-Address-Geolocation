@@ -1,0 +1,55 @@
+.data {
+  z-index: 2;
+  width: 20.375rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10.375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 1.75rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.625rem;
+  padding-left: 1.25rem;
+  box-shadow: 0 1rem 3rem rgba($black, 0.175);
+
+  @include breakpoint-up(medium) {
+    width: 27.53125rem;
+  }
+
+  @include breakpoint-up(large) {
+    width: 69.5rem;
+    top: 12.375rem;
+    flex-direction: row;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__content {
+    &:not(:last-child) {
+      margin-bottom: 1.875rem;
+    }
+
+    @include breakpoint-up(large) {
+      width: 15.25rem;
+      text-align: left;
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 2rem;
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: 4.75rem;
+          width: 1px;
+          background-color: $darkGray;
+          top: 4px;
+          right: 0;
+        }
+      }
+    }
+  }
+}
