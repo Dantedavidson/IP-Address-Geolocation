@@ -1,8 +1,7 @@
+//config set up on netlify, comment out to work on local host
 import TOKEN from "./config.js";
 
-const blackIcon = new L.Icon({
-  iconUrl: "./images/icon-location.svg",
-});
+// const TOKEN = "your geo api token";
 
 const input = document.querySelector(".form__input");
 const button = document.querySelector(".form__button");
@@ -10,7 +9,10 @@ const displayIp = document.querySelector(".ip p");
 const displayLocation = document.querySelector(".location p");
 const displayTimezone = document.querySelector(".timezone p");
 const displayIsp = document.querySelector(".isp p");
-console.log(displayIp, displayIsp, displayLocation, displayTimezone);
+
+const blackIcon = new L.Icon({
+  iconUrl: "./images/icon-location.svg",
+});
 
 const createQuery = () => {
   let query = `https://geo.ipify.org/api/v1?apiKey=${TOKEN}`;
